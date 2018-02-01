@@ -108,7 +108,7 @@ func checkJavaVersion(ctx Context, config Config) {
 		// Early access builds of OpenJDK 9 do not contain the string "openjdk" in the
 		// version name. TODO(tobiast): Reconsider once the OpenJDK 9 toolchain is stable.
 		// http://b/62123342
-		if !strings.Contains(java_version, "openjdk") && !experimental_use_openjdk9 {
+		/*if !strings.Contains(java_version, "openjdk") && !experimental_use_openjdk9 {
 			ctx.Println("*******************************************************")
 			ctx.Println("You are attempting to build with an unsupported JDK.")
 			ctx.Println()
@@ -118,7 +118,7 @@ func checkJavaVersion(ctx Context, config Config) {
 			ctx.Println("    https://source.android.com/source/initializing.html")
 			ctx.Println("*******************************************************")
 			ctx.Fatalln("stop")
-		}
+		}*/
 	} else { // darwin
 		if strings.Contains(java_version, "openjdk") {
 			ctx.Println("*******************************************************")
